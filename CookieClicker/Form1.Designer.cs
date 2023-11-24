@@ -34,6 +34,7 @@
             label1 = new Label();
             label2 = new Label();
             timer1 = new System.Windows.Forms.Timer(components);
+            button2 = new Button();
             SuspendLayout();
             // 
             // button1
@@ -46,7 +47,7 @@
             button1.FlatAppearance.MouseDownBackColor = Color.FromArgb(0, 0, 0, 0);
             button1.FlatAppearance.MouseOverBackColor = Color.FromArgb(0, 0, 0, 0);
             button1.FlatStyle = FlatStyle.Flat;
-            button1.Location = new Point(194, 268);
+            button1.Location = new Point(200, 298);
             button1.Name = "button1";
             button1.Size = new Size(199, 157);
             button1.TabIndex = 0;
@@ -82,12 +83,30 @@
             timer1.Interval = 1000;
             timer1.Tick += timer1_Tick;
             // 
+            // button2
+            // 
+            button2.BackColor = Color.Transparent;
+            button2.BackgroundImage = (Image)resources.GetObject("button2.BackgroundImage");
+            button2.BackgroundImageLayout = ImageLayout.Stretch;
+            button2.FlatAppearance.BorderColor = Color.FromArgb(0, 0, 0, 0);
+            button2.FlatAppearance.BorderSize = 0;
+            button2.FlatAppearance.MouseDownBackColor = Color.FromArgb(0, 0, 0, 0);
+            button2.FlatAppearance.MouseOverBackColor = Color.FromArgb(0, 0, 0, 0);
+            button2.FlatStyle = FlatStyle.Flat;
+            button2.Location = new Point(529, 37);
+            button2.Name = "button2";
+            button2.Size = new Size(52, 47);
+            button2.TabIndex = 3;
+            button2.UseVisualStyleBackColor = false;
+            button2.Click += button2_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
-            ClientSize = new Size(593, 450);
+            ClientSize = new Size(593, 480);
+            Controls.Add(button2);
             Controls.Add(label2);
             Controls.Add(label1);
             Controls.Add(button1);
@@ -103,5 +122,6 @@
         private Label label1;
         private Label label2;
         private System.Windows.Forms.Timer timer1;
+        private Button button2;
     }
 }

@@ -12,7 +12,7 @@ namespace CookieClicker
         {
             //Configurações do Cookie
             timer1.Start();
-            label2.Text = $"Clicks {_clicks}";
+            label2.Text = $"CLICKS: {_clicks}";
             _clicks++;
         }
 
@@ -20,18 +20,28 @@ namespace CookieClicker
         {
             // Configurações do Timer
             _ticks++;
-            label1.Text = $"Tempo {_ticks}";
+            label1.Text = $"TEMPO: {_ticks}";
 
 
-            if( _ticks == 11 ) 
+            if (_ticks == 11)
             {
                 timer1.Stop();
                 label1.Text = "Fim de Jogo";
-                label2.Text = $"Seus Cliques {_clicks}";
+                label2.Text = $"Seus Cliques: {_clicks}";
                 _ticks = 0;
                 _clicks = 0;
                 MessageBox.Show("O Tempo Acabou");
             }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            // Configurações do Refresh do Jogo
+            timer1.Stop();
+            _clicks = 0;
+            _ticks = 0;
+            label1.Text = "TEMPO: 10";
+            label2.Text = "CLICKS: 0";
         }
     }
 }
